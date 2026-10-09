@@ -1,0 +1,13 @@
+node_modules/
+bin/
+
+# CQE runtime artifacts (catalog/cache live outside the target repo by default)
+.cqe/
+.cqe-cache/
+.cqe-index/
+src/.cache.json
+src/statistics.ndjson
+src/telemetry.ndjson
+
+*.log
+.DS_Store

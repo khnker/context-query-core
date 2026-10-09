@@ -1,0 +1,17 @@
+{
+  "name": "context-query-core",
+  "version": "1.0.0",
+  "description": "Core context query and retrieval library for agents",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./core": "./src/core.js"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js test/*.test.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
