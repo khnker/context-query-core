@@ -6,12 +6,12 @@ A cost-aware, robust context query engine core extracted for AI agents and codeb
 
 `cqe-core` treats agent context retrieval as a query optimization problem. Instead of performing naive full-repo grepping, it uses intent detection, logical query planning, hybrid retrieval (`tgrep`, `bm25`, symbols, federated), cost-aware selection, and strict budget limits.
 
-## Grado de Robustez y Resiliencia
+## Robustness and Resilience
 
-1. **Aislamiento por Repositorio**: Cada instancia opera sobre un `repoRoot` explícito sin contaminar estado global ni depender de `process.cwd()`.
-2. **Resiliencia Multiplataforma (`tgrep` + `bm25`)**: Detección automática de binarios (`tgrep` para búsqueda por trigramas) con degradación silenciosa a búsqueda léxica y estructural estándar (`bm25` / `ast-grep`) en Windows, Linux y macOS.
-3. **Gestión Determinista de Presupuesto**: Selección de candidatos acotada por presupuesto de tokens y coste temporal sin dependencias de red ni servicios externos.
-4. **Procedencia Garantizada**: Cada resultado conserva metadatos de origen, operador, consulta y nivel de confianza.
+1. **Repository Isolation**: Each instance operates on an explicit `repoRoot` without contaminating global state or depending on `process.cwd()`.
+2. **Cross-Platform Resilience (`tgrep` + `bm25`)**: Automatic binary detection (`tgrep` for trigram search) with graceful fallback to standard lexical and structural search (`bm25` / `ast-grep`) across Windows, Linux, and macOS.
+3. **Deterministic Budget Management**: Candidate selection constrained by token budget and time cost without network dependencies or external services.
+4. **Guaranteed Provenance**: Each retrieval result preserves metadata regarding source, operator, query, and confidence level.
 
 ## Installation & Usage
 
